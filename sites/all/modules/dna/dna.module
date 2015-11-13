@@ -1,0 +1,82 @@
+<?php
+
+    function dna_menu()
+    {
+        $items['dna'] = array(
+          'title' => 'DNA',
+          'page callback' => 'druapl_get_form',
+          'page arguments' => array('dna_form'),
+          'access callback' => TRUE,
+          'type' => MENU_NORMAL_ITEM,
+        );
+
+        $items['dna_results'] = array(
+            'title' => 'New Sequence',
+            'page callback', => 'dna_results',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+        );
+
+        return $items;
+
+    }
+
+    function dna_form()
+    {
+      $options = array(1 => 'A', 2 => 'T', 3 => 'G', 4 => 'C');
+
+      $form['input_1'] = array(
+        '#title' => 'Element 1',
+        '#type' => 'select',
+        '#description' => 'Element 1',
+        '#options' => $options,
+        '#required' => TRUE,
+      );
+
+      $form['input_2'] = array(
+        '#title' => 'Element 2',
+        '#type' => 'select',
+        '#description' => 'Element 2',
+        '#options' => $options,
+        '#required' => TRUE,
+      );
+
+      $form['input_3'] = array(
+        '#title' => 'Element 3',
+        '#type' => 'select',
+        '#description' => 'Element 3',
+        '#options' => $options,
+        '#required' => TRUE,
+      );
+
+      $form['input_4'] = array(
+        '#title' => 'Element 4',
+        '#type' => 'select',
+        '#description' => 'Element 4',
+        '#options' => $options,
+        '#required' => TRUE,
+      );
+
+      $form['input_5'] = array(
+        '#title' => 'Element 5',
+        '#type' => 'select',
+        '#description' => 'Element 5',
+        '#options' => $options,
+        '#required' => TRUE,
+      );
+
+      $form['input_6'] = array(
+        '#title' => 'Element 6',
+        '#type' => 'select',
+        '#description' => 'Element 6',
+        '#options' => $options,
+        '#required' => TRUE,
+      );
+
+      $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => 'Go'
+      );
+
+      return $form; 
+    }
