@@ -1,0 +1,5 @@
+name = Ajax Loader
+description = Display nodes with Ajax
+package = Final Code Review
+core = 7.x
+files[] = ajax_loader.module
